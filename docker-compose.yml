@@ -1,0 +1,11 @@
+version: "3.9"
+
+#El nombre web puede ser cualquiera
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code 
